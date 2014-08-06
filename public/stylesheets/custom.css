@@ -1,0 +1,6 @@
+.message_box {
+  height: 300px;
+  width: 450px;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
