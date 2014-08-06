@@ -11,6 +11,6 @@ var server = http.createServer(function (req, res) {
   }).resume();
 });
 
-server.listen(8000);
+server.listen(80);
 
 chatServer.listen(server);
