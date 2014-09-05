@@ -27,7 +27,7 @@
         $('form').on('submit', function (event) {
           event.preventDefault();
           var message = $('textarea').val();
-           $('textarea').val("");
+          $('textarea').val("");
           socket.emit('from_browser_event', { message: message });
         });
       });
@@ -41,7 +41,10 @@
           <form id="chat-box-form" class="form">
             <div class="form-group">
               <textarea class="form-control" name="message" autofocus
-              onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }"
+              onkeydown="if (event.keyCode == 13) { event.preventDefault();
+                var message = $('textarea').val();
+                socket.emit('from_browser_event', { message: message });
+               }"
               ></textarea>
             </div>
 
