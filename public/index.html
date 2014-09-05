@@ -44,6 +44,7 @@
               onkeydown="if (event.keyCode == 13) { event.preventDefault();
                 var message = $('textarea').val();
                 socket.emit('from_browser_event', { message: message });
+                $('textarea').val() = ''
                }"
               ></textarea>
             </div>
