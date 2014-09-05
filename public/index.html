@@ -40,7 +40,9 @@
           <h1> Chat </h1>
           <form id="chat-box-form" class="form">
             <div class="form-group">
-              <textarea class="form-control" name="message" autofocus></textarea>
+              <textarea class="form-control" name="message" autofocus
+              onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }"
+              ></textarea>
             </div>
 
             <button class="btn btn-primary">send</button>
